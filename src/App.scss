@@ -1,0 +1,48 @@
+#root {
+  font-family: var(--font-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 10px 0px;
+}
+
+.heading1 {
+  font-family: var(--font-bold);
+}
+
+.card {
+  padding: 2em;
+}
+.cards {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.mt-2 {
+  margin-top: 20px;
+}
+.max-width-5 {
+  max-width: 500px;
+}
+.max-width-1 {
+  max-width: 100px;
+}
+
+.self-align-center {
+  align-self: center;
+}
+
+.display-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

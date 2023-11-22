@@ -1,0 +1,74 @@
+:root {
+  --shadow-card: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  padding: 12px;
+  border: 1px solid var(--color-foreground3);
+  border-radius: 6px;
+  box-shadow: var(--shadow-card);
+  width: 230px;
+}
+.card-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-head-id {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.card-contents .card-content {
+  display: flex;
+  gap: 0.5rem;
+}
+.card-close-icon {
+  width: 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.card-content-container {
+  padding: 10px 10px 10px 0px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

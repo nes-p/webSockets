@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0% auto;
+  padding: 24px 10px;
+  display: flex;
+  max-width: var(--max-width);
+  width: var(--max-width);
+  background: var(--color-foreground4);
+
+  .header-title {
+    visibility: hidden;
+  }
+
+  .header-logo {
+    width: 60px;
+  }
+}
