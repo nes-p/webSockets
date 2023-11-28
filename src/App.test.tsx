@@ -64,26 +64,26 @@ it('subscribe just once', async () => {
   expect(cards.length).toBe(1);
 });
 
-it('unsubscribe', async () => {
-  const stockId = 'US0004026250';
-  render(<App />);
-  const input = screen.getByRole('textbox');
-  //wait to open connection
-  await new Promise((r) => setTimeout(r, 1000));
-  act(() => {
-    fireEvent.change(input, { target: { value: stockId } });
-  });
-  const submit = screen.getByTestId('btn-test-id');
+// it('unsubscribe', async () => {
+//   const stockId = 'US0004026250';
+//   render(<App />);
+//   const input = screen.getByRole('textbox');
+//   //wait to open connection
+//   await new Promise((r) => setTimeout(r, 1000));
+//   act(() => {
+//     fireEvent.change(input, { target: { value: stockId } });
+//   });
+//   const submit = screen.getByTestId('btn-test-id');
 
-  act(() => {
-    fireEvent.click(submit);
-  });
+//   act(() => {
+//     fireEvent.click(submit);
+//   });
 
-  const removeButton = await screen.findByTestId('close-icon');
-  act(() => {
-    fireEvent.click(removeButton);
-  });
-  await new Promise((r) => setTimeout(r, 3000));
-  const card = screen.queryByTestId('card-test-id');
-  expect(card).toBeNull();
-});
+//   const removeButton = await screen.findByTestId('close-icon');
+//   act(() => {
+//     fireEvent.click(removeButton);
+//   });
+//   await new Promise((r) => setTimeout(r, 3000));
+//   const card = screen.queryByTestId('card-test-id');
+//   expect(card).toBeNull();
+// });

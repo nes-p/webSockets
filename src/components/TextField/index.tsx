@@ -52,7 +52,7 @@ const TextField: FC<ITextField> = ({
   </div>
 );
 TextField.defaultProps = {
-  placeholder: 'Please enter the ISIN',
+  placeholder: 'ISIN like NA000K0VF054 or US0004026250 or DE000BASF111',
   isValid: true,
   validationMessage: 'Please insert valid stock number',
 };
